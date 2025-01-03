@@ -10,3 +10,21 @@ burgerImages.forEach((img, index) => {
         currentIndex = (currentIndex + 1) % toggleImages.length;
     });
 });
+
+// Generate random animation//
+
+function createStars(){
+    const starsContainer = document.getElementById('stars');
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+
+    for (let i = 0;  100; i++){
+        const star = document.creareElement('div');
+        star.className = 'star';
+        star.style.left = '${Math.random() * windowWidth)px';
+        star.style.top = '${Math.random() * windowsWidth)px';
+        starsContainer.appendChild(star);
+    }
+    // call the create function star //
+    window.addEventListener('load', createStars);
+}
